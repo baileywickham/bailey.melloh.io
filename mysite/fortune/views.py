@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from .models import Fortune 
 
 def index(request):
-    l = Question.object
+    l = Fortune.
     i = 1
 
 
