@@ -1,0 +1,24 @@
+version: "3"
+services:
+    web:
+        build: .
+        restart: always
+        command: pipenv run ./bailey/manage.py runserver 0.0.0.0:8000
+        # gunicorn --bind 0.0.0.0:8080 
+        volumes:
+            - .:/www
+        ports:
+            - "8000:8000"
+        depends_on:
+            - nginx
+
+    nginx:
+        image: "nginx"
+        restart: always
+        volumes:
+            - ./nginx/:/etc/nginx/conf.d/
+        ports:
+            - "80:80"
+        extra_hosts:
+            - "dockerhost:$DOCKERHOST"
+
