@@ -3,7 +3,7 @@ services:
     web:
         build: .
         restart: always
-        command: pipenv run ./bailey/manage.py runserver 0.0.0.0:8000
+        command: gunicorn ./bailey/manage.py runserver 0.0.0.0:8000
         # gunicorn --bind 0.0.0.0:8080 
         volumes:
             - .:/www

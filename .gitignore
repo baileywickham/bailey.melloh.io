@@ -1,2 +1,5 @@
 .swp
 __pycache__/
+.gitsecret/keys/random_seed
+secret
+django-key
