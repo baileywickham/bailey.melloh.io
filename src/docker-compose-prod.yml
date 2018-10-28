@@ -3,9 +3,8 @@ services:
     web:
         build: .
         restart: always
-        command: pipenv graph 
-        # gunicorn --bind 0.0.0.0:8080 bailey.wsgi:application
-        # gunicorn --bind 0.0.0.0:8080 
+        command: pipenv run  gunicorn --bind 0.0.0.0:8080 bailey.wsgi:application
+        #command: pipenv run ./bailey/manage.py runserver 0.0.0.0:8000
         volumes:
             - .:/www
         ports:
