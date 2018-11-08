@@ -21,4 +21,5 @@ RUN pipenv install --system --deploy
 ENV PYTHONUNBUFFERED 1
 #change
 COPY . /www/ 
+WORKDIR /www/bailey
 EXPOSE 8000
