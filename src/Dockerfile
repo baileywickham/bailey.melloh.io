@@ -4,6 +4,8 @@ WORKDIR /www
 COPY Pipfile /www/
 COPY Pipfile.lock /www/
 
+ENV PYTHONUNBUFFERED 1
+
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 RUN apt update
@@ -18,8 +20,8 @@ RUN apt install -y \
 RUN pip3 install pipenv
 RUN pipenv install --system --deploy 
 
-ENV PYTHONUNBUFFERED 1
 #change
 COPY . /www/ 
 WORKDIR /www/bailey
+RUN python3 manage.py collectstatic --noinput
 EXPOSE 8000
