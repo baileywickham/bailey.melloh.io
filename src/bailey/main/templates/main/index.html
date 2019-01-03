@@ -1,17 +1,28 @@
-	<head>
-		{% load static %}
-        <link rel="stylesheet" href="{% static "main/tufte.css" %}">
-	</head>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "main/tufte.css" %}">
+</head>
 
-	<body>
-		<article>
-			<section>
-				<h2 id="figures">Bailey Wickham</h2>
-								<p><label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="{% static 'main/img/b.jpg' %}" alt="Me"/> 
+<body>
+    <article>
+        <section>
+            <h1 id="figures">Bailey Wickham</h1>
+            <br>
+            <p><label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><button class="button">Resume</button><br></p>
 
-				<p>That guy on the right, yeah that's me. I am Bailey Wickham, a programmer and a student at Cal Poly studying Math, Software Engineering and Chinese.</p>
-				<p>Figures should try to use the <code>figure</code> element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like so:</p>
+            <p><label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="{% static 'main/img/b.jpg' %}" alt="Me"/>
+                Yep that man is me, at my high school graduation!
+            </p>
+            <h2>About</h2>
 
-				</section>
-			</article>
-		</body>
+            <p>That guy on the right, yeah that's me. I am Bailey Wickham, a programmer and a student at Cal Poly majoring in Software Engineering and minoring in Math and Chinese. I love space, running, art, longboarding, music, skiing, programming and traveling.</p>
+
+            <button class="button">Resume</button>
+
+            <p>Thanks to tufte.css for the open source css framework that makes this site possible.</p>
+
+
+
+        </section>
+    </article>
+</body>
