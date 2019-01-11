@@ -19,7 +19,6 @@ services:
         restart: always
         volumes:
             - ./nginx/:/etc/nginx/conf.d/
-            - /etc/letsencrypt/:/etc/letsencrypt/
         ports:
             #Outward facing
             - "80:80"
